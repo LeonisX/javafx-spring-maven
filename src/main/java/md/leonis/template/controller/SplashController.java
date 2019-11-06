@@ -1,10 +1,10 @@
-package md.leonis.assistant.controller;
+package md.leonis.template.controller;
 
 import javafx.animation.PauseTransition;
 import javafx.fxml.FXML;
 import javafx.util.Duration;
-import md.leonis.assistant.view.FxmlView;
-import md.leonis.assistant.view.StageManager;
+import md.leonis.template.view.FxmlView;
+import md.leonis.template.view.StageManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Controller;

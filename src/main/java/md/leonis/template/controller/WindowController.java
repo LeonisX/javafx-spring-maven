@@ -1,4 +1,4 @@
-package md.leonis.assistant.controller;
+package md.leonis.template.controller;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -7,9 +7,9 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.VBox;
-import md.leonis.assistant.controller.template.TemplateController;
-import md.leonis.assistant.domain.ScriptWord;
-import md.leonis.assistant.view.StageManager;
+import md.leonis.template.controller.template.TemplateController;
+import md.leonis.template.domain.ScriptWord;
+import md.leonis.template.view.StageManager;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Controller;
 

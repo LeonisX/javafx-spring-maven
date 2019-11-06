@@ -1,4 +1,4 @@
-package md.leonis.assistant.controller.template;
+package md.leonis.template.controller.template;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableSet;
@@ -7,9 +7,9 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.layout.HBox;
-import md.leonis.assistant.domain.LanguageLevel;
-import md.leonis.assistant.utils.ListenerHandles;
-import md.leonis.assistant.view.StageManager;
+import md.leonis.template.domain.LanguageLevel;
+import md.leonis.template.utils.ListenerHandles;
+import md.leonis.template.view.StageManager;
 
 import java.util.Arrays;
 import java.util.HashSet;

@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="743.0"
             prefWidth="700.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="md.leonis.assistant.controller.WindowController">
+            fx:controller="md.leonis.template.controller.WindowController">
     <top>
         <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER"/>
     </top>

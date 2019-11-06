@@ -1,10 +1,10 @@
-package md.leonis.assistant;
+package md.leonis.template;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
-import md.leonis.assistant.view.FxmlView;
-import md.leonis.assistant.view.StageManager;
+import md.leonis.template.view.FxmlView;
+import md.leonis.template.view.StageManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;

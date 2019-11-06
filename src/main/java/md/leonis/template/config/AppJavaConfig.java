@@ -1,9 +1,8 @@
-package md.leonis.assistant.config;
+package md.leonis.template.config;
 
 import javafx.stage.Stage;
-import md.leonis.assistant.view.SpringFXMLLoader;
-import md.leonis.assistant.view.StageManager;
-import org.springframework.beans.factory.annotation.Autowired;
+import md.leonis.template.view.SpringFXMLLoader;
+import md.leonis.template.view.StageManager;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Lazy;

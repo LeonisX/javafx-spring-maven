@@ -1,4 +1,4 @@
-package md.leonis.assistant.domain;
+package md.leonis.template.domain;
 
 import lombok.Getter;
 

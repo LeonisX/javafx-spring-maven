@@ -1,4 +1,4 @@
-package md.leonis.assistant.utils;
+package md.leonis.template.utils;
 
 import javafx.beans.InvalidationListener;
 import javafx.beans.Observable;

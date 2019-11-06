@@ -1,4 +1,4 @@
-package md.leonis.assistant.view;
+package md.leonis.template.view;
 
 import java.util.ResourceBundle;
 

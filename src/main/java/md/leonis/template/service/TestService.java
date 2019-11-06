@@ -1,7 +1,7 @@
-package md.leonis.assistant.service;
+package md.leonis.template.service;
 
-import md.leonis.assistant.dao.test.DictionaryDAO;
-import md.leonis.assistant.domain.test.Dictionary;
+import md.leonis.template.dao.test.DictionaryDAO;
+import md.leonis.template.domain.test.Dictionary;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

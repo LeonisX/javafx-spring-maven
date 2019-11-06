@@ -1,16 +1,11 @@
-package md.leonis.assistant.controller;
+package md.leonis.template.controller;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
-import javafx.scene.layout.HBox;
-import md.leonis.assistant.config.ConfigHolder;
-import md.leonis.assistant.service.TestService;
-import md.leonis.assistant.view.FxmlView;
-import md.leonis.assistant.view.StageManager;
-import org.springframework.beans.factory.annotation.Autowired;
+import md.leonis.template.config.ConfigHolder;
+import md.leonis.template.service.TestService;
+import md.leonis.template.view.FxmlView;
+import md.leonis.template.view.StageManager;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Controller;
 

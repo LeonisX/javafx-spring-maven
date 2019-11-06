@@ -6,7 +6,7 @@
 <?import javafx.scene.text.Font?>
 <BorderPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
             minWidth="-Infinity" prefHeight="175.0" prefWidth="373.0" xmlns="http://javafx.com/javafx/10.0.1"
-            fx:controller="md.leonis.assistant.controller.SplashController">
+            fx:controller="md.leonis.template.controller.SplashController">
     <center>
         <VBox alignment="BOTTOM_LEFT" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
             <opaqueInsets>

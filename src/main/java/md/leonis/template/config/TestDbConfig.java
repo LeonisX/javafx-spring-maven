@@ -1,4 +1,4 @@
-package md.leonis.assistant.config;
+package md.leonis.template.config;
 
 import liquibase.integration.spring.SpringLiquibase;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -24,7 +24,7 @@ import javax.sql.DataSource;
 @Configuration
 @EnableTransactionManagement
 @EnableAutoConfiguration(exclude = {DataSourceAutoConfiguration.class})
-@EnableJpaRepositories(basePackages = {"md.leonis.assistant.dao.test"})
+@EnableJpaRepositories(basePackages = {"md.leonis.template.dao.test"})
 public class TestDbConfig {
 
     @Primary

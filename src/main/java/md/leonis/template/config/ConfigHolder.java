@@ -1,4 +1,4 @@
-package md.leonis.assistant.config;
+package md.leonis.template.config;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
