@@ -1,5 +1,6 @@
 package md.leonis.assistant.controller;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -19,15 +20,18 @@ public class DashboardController {
     @FXML
     public TextArea infoTextArea;
 
+    private final StageManager stageManager;
+
+    private final ConfigHolder configHolder;
+
+    private final TestService testService;
+
     @Lazy
-    @Autowired
-    private StageManager stageManager;
-
-    @Autowired
-    private ConfigHolder configHolder;
-
-    @Autowired
-    private TestService testService;
+    public DashboardController(StageManager stageManager, ConfigHolder configHolder, TestService testService) {
+        this.stageManager = stageManager;
+        this.configHolder = configHolder;
+        this.testService = testService;
+    }
 
     @FXML
     private void initialize() {
@@ -37,5 +41,9 @@ public class DashboardController {
 
     public void windowShow() {
         stageManager.showNewWindow(FxmlView.WINDOW);
+    }
+
+    public void showNotification() {
+        stageManager.showInformationAlert("Title: selected all", "Header: selected all", "some content");
     }
 }

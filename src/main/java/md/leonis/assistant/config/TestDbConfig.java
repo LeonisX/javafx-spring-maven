@@ -23,7 +23,7 @@ import javax.sql.DataSource;
 
 @Configuration
 @EnableTransactionManagement
-@EnableAutoConfiguration(exclude = {  DataSourceAutoConfiguration.class })
+@EnableAutoConfiguration(exclude = {DataSourceAutoConfiguration.class})
 @EnableJpaRepositories(basePackages = {"md.leonis.assistant.dao.test"})
 public class TestDbConfig {
 

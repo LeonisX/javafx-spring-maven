@@ -2,9 +2,6 @@ package md.leonis.assistant.service;
 
 import md.leonis.assistant.dao.test.DictionaryDAO;
 import md.leonis.assistant.domain.test.Dictionary;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,13 +9,10 @@ import java.util.List;
 @Service
 public class TestService {
 
-    private static final Logger log = LoggerFactory.getLogger(TestService.class);
+    private final DictionaryDAO dictionaryDAO;
 
-    @Autowired
-    private DictionaryDAO dictionaryDAO;
-
-    public void echo() {
-        System.out.println("ECHO");
+    public TestService(DictionaryDAO dictionaryDAO) {
+        this.dictionaryDAO = dictionaryDAO;
     }
 
     public List<Dictionary> getDictionaries() {

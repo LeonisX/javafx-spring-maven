@@ -7,7 +7,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.layout.HBox;
-import md.leonis.assistant.config.ConfigHolder;
 import md.leonis.assistant.domain.LanguageLevel;
 import md.leonis.assistant.utils.ListenerHandles;
 import md.leonis.assistant.view.StageManager;
@@ -29,32 +28,12 @@ public class TemplateController extends HBox {
     private CheckBox a2CheckBox;
     @FXML
     private CheckBox a2pCheckBox;
-    @FXML
-    private CheckBox b1CheckBox;
-    @FXML
-    private CheckBox b1pCheckBox;
-    @FXML
-    private CheckBox b2CheckBox;
-    @FXML
-    private CheckBox b2pCheckBox;
-    @FXML
-    private CheckBox c1CheckBox;
-    @FXML
-    private CheckBox c2CheckBox;
-    @FXML
-    private CheckBox c2pCheckBox;
 
     @FXML
     private HBox containerHBox;
 
     @FXML
     private Button selectAllButton;
-
-    //TODO delete
-    private StageManager stageManager;
-
-    //TODO delete
-    private ConfigHolder configHolder;
 
     private Set<LanguageLevel> levels;
 
@@ -65,7 +44,6 @@ public class TemplateController extends HBox {
     private ListenerHandles selectedLevelsListenerHandles;
 
     public TemplateController(StageManager stageManager) {
-        this.stageManager = stageManager;
         this.levels = new HashSet<>(Arrays.asList(LanguageLevel.values()));
         this.selectedLevels = FXCollections.observableSet(new HashSet<>(levels));
         this.selectedLevelsListenerHandles = new ListenerHandles(selectedLevels);
@@ -85,15 +63,15 @@ public class TemplateController extends HBox {
                 .collect(Collectors.toSet()));
     }
 
-    private void filterCheckBoxClick(ActionEvent actionEvent) {
-        updateSelectedList((CheckBox) actionEvent.getSource());
-    }
-
     public void selectAllButtonClick() {
         selectedLevelsListenerHandles.disableListeners();
         checkBoxes.forEach(c -> c.setSelected(true));
         selectedLevels.addAll(levels);
         selectedLevelsListenerHandles.enableAndNotifyListeners();
+    }
+
+    private void filterCheckBoxClick(ActionEvent actionEvent) {
+        updateSelectedList((CheckBox) actionEvent.getSource());
     }
 
     private void updateSelectedList(CheckBox checkBox) {

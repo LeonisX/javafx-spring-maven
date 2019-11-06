@@ -23,14 +23,16 @@ public class MainApp extends Application {
         Application.launch(args);
     }
 
-    /*А вот с точкой входа в приложение все гораздо интересней!
-    Нам необходимо инициализировать Spring контекст и сделать это можно в двух разных местах:
-    Если Вам потребуется создать экземпляры типов Scene, Stage, открыть popup, то делать это нужно в методе start(), т.к. он вызывается в UI потоке.
-    В противном случае можете воспользоваться методом init() (как в примере ниже), который вызывается не в UI потоке перед вызовом метода start().*/
+    /* We need to initialize the Spring context and this can be done in two different places:
+     * If we need to create instances of types Scene, Stage, open popup,
+     * then we need to do this in the start() method, because It is called in the UI thread.
+     * Otherwise, we can use the init() method (as in the example below),
+     * which is not called in the UI thread before the start() method is called.
+     */
     @Override
     public void init() {
         String[] args = this.getParameters().getRaw().toArray(new String[0]);
-        // Именно на момент инициализации JavaFX мы запускаем инициализацию Spring контекста:
+        // We run Spring context initialization at the time of JavaFX initialization:
         springContext = SpringApplication.run(MainApp.class, args);
     }
 
@@ -47,11 +49,6 @@ public class MainApp extends Application {
         // Here probably close connections to DB
     }
 
-    /**
-     * Useful to override this method by sub-classes wishing to change the first
-     * Scene to be displayed on startup. Example: Functional tests on main
-     * window.
-     */
     protected void displayInitialScene() {
         //TODO w/o borders https://stackoverflow.com/questions/14972199/how-to-create-splash-screen-with-transparent-background-in-javafx
         // Caused by: java.lang.IllegalStateException: Cannot set style once stage has been set visible

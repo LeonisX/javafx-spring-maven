@@ -10,7 +10,6 @@ import javafx.scene.layout.VBox;
 import md.leonis.assistant.controller.template.TemplateController;
 import md.leonis.assistant.domain.ScriptWord;
 import md.leonis.assistant.view.StageManager;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Controller;
 
@@ -34,12 +33,20 @@ public class WindowController {
 
     private ObservableList<ScriptWord> wordData = FXCollections.observableArrayList();
 
-    @Lazy
-    @Autowired
     private StageManager stageManager;
+
+    @Lazy
+    public WindowController(StageManager stageManager) {
+        this.stageManager = stageManager;
+    }
 
     @FXML
     private void initialize() {
+
+        TemplateController templateController = new TemplateController(stageManager);
+        //templateController.getSelectAllButton().setOnAction(event -> selectAllClick());
+        templateController.getSelectedLevelsListenerHandles().registerListener(event -> refreshWebView());
+        vBox.getChildren().add(templateController);
 
         wordColumn.setCellValueFactory(new PropertyValueFactory<>("word"));
         //transcrColumn.setCellValueFactory(new PropertyValueFactory<>("level"));
@@ -51,18 +58,13 @@ public class WindowController {
         xColumn.setCellValueFactory(new PropertyValueFactory<>("x"));
 
         wordsTable.setItems(wordData);
-
-        TemplateController templateController = new TemplateController(stageManager);
-        templateController.getSelectAllButton().setOnAction(event -> selectAllClick());
-        templateController.getSelectedLevelsListenerHandles().registerListener(event -> refreshWebView());
-        vBox.getChildren().add(templateController);
     }
 
     private void selectAllClick() {
-        stageManager.showInformationAlert("Title: selected all", "Header: selected all", "some content");
+        //stageManager.showInformationAlert("Title: selected all", "Header: selected all", "some content");
     }
 
     private void refreshWebView() {
-        stageManager.showWarningAlert("Title: refresh", "Header: refresh", "some content");
+        //stageManager.showWarningAlert("Title: refresh", "Header: refresh", "some content");
     }
 }

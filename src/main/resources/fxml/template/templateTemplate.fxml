@@ -17,12 +17,5 @@
     <CheckBox fx:id="a1CheckBox" mnemonicParsing="false" text="A1" />
     <CheckBox fx:id="a2CheckBox" mnemonicParsing="false" text="A2" />
     <CheckBox fx:id="a2pCheckBox" mnemonicParsing="false" text="A2+" />
-    <CheckBox fx:id="b1CheckBox" mnemonicParsing="false" text="B1" />
-    <CheckBox fx:id="b1pCheckBox" mnemonicParsing="false" text="B1+" />
-    <CheckBox fx:id="b2CheckBox" mnemonicParsing="false" text="B2" />
-    <CheckBox fx:id="b2pCheckBox" mnemonicParsing="false" text="B2+" />
-    <CheckBox fx:id="c1CheckBox" mnemonicParsing="false" text="C1" />
-    <CheckBox fx:id="c2CheckBox" mnemonicParsing="false" text="C2" />
-    <CheckBox fx:id="c2pCheckBox" mnemonicParsing="false" text="C2+" />
     <Button fx:id="selectAllButton" mnemonicParsing="false" onAction="#selectAllButtonClick" text="Select all" />
 </fx:root>
